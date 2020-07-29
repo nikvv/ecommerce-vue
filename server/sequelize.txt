@@ -1,0 +1,12 @@
+sequelize db:drop --env test
+sequelize db:create --env test
+
+sequelize model:generate --name User --attributes username:STRING,email:STRING,password:STRING,role:STRING
+sequelize model:generate --name Product --attributes name:STRING,image_url:STRING,price:INTEGER,stock:INTEGER
+
+sequelize model:generate --name Banner --attributes name:STRING,image_url:STRING
+sequelize model:generate --name Cart --attributes userId:INTEGER, status:STRING
+sequelize model:generate --name CartProduct --attributes cartId:INTEGER,productId:INTEGER,quantity:INTEGER
+
+sequelize db:migrate --env test
+
