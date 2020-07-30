@@ -3,8 +3,10 @@ import Vuex from 'vuex';
 import axios from '../../axios.config'
 
 import router from '../router'
+import VueSweetalert2 from 'vue-sweetalert2';
 
 Vue.use(Vuex);
+Vue.use(VueSweetalert2);
 
 export default new Vuex.Store({
   state: {
@@ -28,7 +30,7 @@ export default new Vuex.Store({
     SET_PRODUCT(state, payload) {
       state.product = payload
     },
-    SET_CARD_PRODUCTS(state, payload) {
+    SET_CART_PRODUCTS(state, payload) {
       state.CartProducts = payload
     },
   },
@@ -88,10 +90,11 @@ export default new Vuex.Store({
       })
         .then(({ data }) => {
           console.log(data,`--------------------------FETCH CART`)
-          context.commit('SET_CARD_PRODUCTS', data.cart.CartProducts)
+          context.commit('SET_CART_PRODUCTS', data.cart.CartProducts)
         })
         .catch(error => {
           console.log(error)
+          context.commit('SET_CART_PRODUCTS', [])
         })
     },
 
@@ -144,6 +147,8 @@ export default new Vuex.Store({
       })
         .then(({ data }) => {
           console.log(data)
+          context.dispatch("fetchCart")
+
         })
         .catch(error => {
           console.log(error)
@@ -195,6 +200,11 @@ export default new Vuex.Store({
       })
       .then(data => {
         console.log(data)
+        swal({
+          icon: "success",
+          title: "Success",
+          text: "Sucessfully add to cart!",
+        });
       })
       .catch(error => {
         console.log(error)

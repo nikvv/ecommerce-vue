@@ -24,9 +24,17 @@
           :to="{name:'Products'}"
           class="block lg:inline-block mt-4 lg:mt-0 ml-16 text-gray-100"
         >Products</router-link>-->
+        <router-link
+          class="text-xl text-gray-100 ml-16 font-brand tracking-wider font-semibold hover:no-underline"
+          :to="{name:'Collections'}"
+        >Collections</router-link>
       </div>
       <div class="flex items-baseline lg:order-3 lg:block w-full lg:w-2/5 lg:text-right">
-        <router-link :to="{name:'Checkout'}" class="block lg:inline-block mt-4 lg:mt-0 mr-10 text-gray-100" href="#">
+        <router-link
+          :to="{name:'Checkout'}"
+          class="block lg:inline-block mt-4 lg:mt-0 mr-10 text-gray-100"
+          href="#"
+        >
           <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
             <path
               fill-rule="evenodd"
@@ -87,7 +95,14 @@ export default {
       if (this.$route.name !== "Home") this.$router.push({ name: "Home" });
     },
     login() {
-      this.$router.push({name:'Login'})
+      this.$router.push({ name: "Login" });
+    },
+    swal() {
+      this.$swal({
+        icon: "error",
+        title: "Oops...",
+        text: "Something went wrong!"
+      });
     }
   }
 };

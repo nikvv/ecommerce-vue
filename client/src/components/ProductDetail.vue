@@ -9,7 +9,10 @@
         />
         <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
           <h1 class="text-white text-3xl title-font font-medium mb-1">{{product.name}}</h1>
-          <h1 class="text-white text-3xl title-font font-medium mb-1">{{product.stock}}</h1>
+          <h1 class="text-white text-3xl title-font font-medium mb-1">
+            {{product.stock}}
+            <span class="text-sm">in stock</span>
+          </h1>
 
           <!-- <div class="flex mb-4">
           <span class="flex items-center">
@@ -49,7 +52,6 @@
             >Add to cart</button>
             <p class="text-2xl ml-auto text-white" v-else>OUT OF STOCK</p>
           </div>
-          
         </div>
       </div>
     </div>
@@ -68,6 +70,11 @@ export default {
       if (localStorage.access_token) {
         const payload = { product_id: id };
         this.$store.dispatch("addToCart", payload);
+        this.$swal({
+          icon: "success",
+          title: "Success",
+          text: "Sucessfully add to cart!",
+        });
       } else {
         this.$router.push({ name: "Login" });
       }

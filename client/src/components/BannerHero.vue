@@ -4,6 +4,13 @@
       </div>
 </template>
 
+<script>
+export default {
+      name: 'BannerHero'
+
+}
+</script>
+
 <style scoped>
 .banner{
       object-fit: cover;

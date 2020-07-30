@@ -49,7 +49,7 @@ export default {
           total += cartInstance.Product.price * cartInstance.quantity;
         });
       }
-      return numeral(total).format("000,00");
+      return total
     }
   }
 };
