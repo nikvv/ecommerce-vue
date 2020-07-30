@@ -53,15 +53,15 @@ module.exports = (sequelize, DataTypes) => {
         notNull:true,
       },
     },
-    role: DataTypes.STRING
+    role: {
+      type:DataTypes.STRING,
+      defaultValue: 'customer'
+    }
   }, {
     sequelize,
     hooks:{
       beforeCreate: (user) => {
         user.password = encrypt(user.password)
-        if(user.role === undefined || user.role === ''){
-          user.role = "user"
-        }
       }
     },
     modelName: 'User',

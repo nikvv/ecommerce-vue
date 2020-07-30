@@ -4,9 +4,11 @@ const CartController = require('../controllers/cart-controller')
 
 router.use(Auth.authentication)
 
-router.post('/', CartController.create)
-router.delete('/:productId', CartController.create)
-router.put('/', CartController.updateQuantity)
+router.post('/', CartController.add)
+router.get('/', CartController.userCart)
+router.put('/checkout', CartController.checkout)
+router.delete('/:productId', CartController.deleteItem)
+router.put('/:productId', CartController.updateQuantity)
 
 
 
