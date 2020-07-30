@@ -1,0 +1,41 @@
+{
+  "products": [
+            {
+                  "name": "Trust Nobody",
+                  "description": "Because no one can be trusted.",
+                  "image_url": "https://imgur.com/94IZMS8.jpg",
+                  "price": "110000",
+                  "stock": "10"
+            },
+            {
+                  "name": "You Should be On My Bed",
+                  "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. In necessitatibus quod nisi at voluptatibus fugiat facere dolore sunt officiis repellendus.",
+                  "image_url": "https://i.imgur.com/1n3gZbj.jpg",
+                  "price": "110000",
+                  "stock": "10"
+            },
+            {
+                  "name": "Mrs. Rabbit Loves to Slit",
+                  "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. In necessitatibus quod nisi at voluptatibus fugiat facere dolore sunt officiis repellendus.",
+                  "image_url": "https://imgur.com/P2y0C2i.jpg",
+                  "price": "110000",
+                  "stock": "10"
+            },
+            {
+                  "name": "Human Doesn't Bite",
+                  "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. In necessitatibus quod nisi at voluptatibus fugiat facere dolore sunt officiis repellendus.",
+                  "image_url": "https://imgur.com/NdZ4K0R.jpg",
+                  "price": "110000",
+                  "stock": "10"
+            },
+            {
+                  "name": "I Owe You Nothing",
+                  "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. In necessitatibus quod nisi at voluptatibus fugiat facere dolore sunt officiis repellendus.",
+                  "image_url": "https://imgur.com/1NWzhav.jpg",
+                  "price": "110000",
+                  "stock": "10"
+            }
+
+            
+      ]
+}
