@@ -1,5 +1,5 @@
 # Project: E-commerce
-## Description: Week 3 & 4 Phase 2 portofolio E-commerce
+## Description: E-commerce client website using vue framework
 
 ## Link
 https://ecommerce-client-be84f.web.app/
